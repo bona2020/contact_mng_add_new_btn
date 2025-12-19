@@ -25,7 +25,7 @@ function App() {
   }
 
   return (
-    <div className='Card'>
+    <div >
       <h1>Contact Manager</h1>
       <ContactInput onChangename={Handelname} onChangenumber={Handelnumber} onClick={Handelcontact} />
       <ContactList items={contacts} />
