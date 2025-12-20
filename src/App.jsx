@@ -23,12 +23,14 @@ function App() {
   const Handelcontact = () => {
     setContact([...contacts, { Name: name, Number: number }])
   }
-
+const Handeldelete = (index)=>{
+  setContact(contacts.filter((_,i) => i !==index))
+}
   return (
     <div >
       <h1>Contact Manager</h1>
       <ContactInput onChangename={Handelname} onChangenumber={Handelnumber} onClick={Handelcontact} />
-      <ContactList items={contacts} />
+      <ContactList items={contacts} onDelete = {Handeldelete} />
     </div>
   )
 }
